@@ -1,0 +1,21 @@
+{
+  "name": "web-assembly-using-nextjs",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "wasm" : "cd pages/api/functions/image-grayscale && cargo build --release --target wasm32-wasi && cp target/wasm32-wasi/release/grayscale.wasm ../../",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "12.2.5",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "eslint": "8.23.0",
+    "eslint-config-next": "12.2.5"
+  }
+}
